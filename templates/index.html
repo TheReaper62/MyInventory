@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block viewname%}Dashboard{% endblock %}
+
+{% block content %}
+
+
+{% endblock %}
+
+{% block table_name %}Administrators{% endblock %}
+
+{% block table_headers %}
+<th>ID</th>
+<th>Name</th>
+<th>Joined In</th>
+{% endblock %}
+
+{% block table_data %}
+{% for i in administrators %}
+  <tr>
+    <td>{{i["id"]}}</td>
+    <td>{{i["name"]}}</td>
+    <td>{{i["joined_in"]}}</td>
+  </tr>
+{% endfor %}
+{% endblock %}
+
